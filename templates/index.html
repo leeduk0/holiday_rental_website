@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- 100042945 -->
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Moby Lodge</title>
+    
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    <script src=" http://code.jquery.com/jquery-1.9.1.js "></script>
+    <script src="{{ url_for('static', filename='scripts/navbar.js') }}"></script>
+  </head>
+  
+  <body>
+    <div id="wrapper">
+    
+      <header>
+        
+        <div id="header-top">
+          <div class="container">
+            <h1>Moby Lodge</h1>
+            <span class="menu-trigger">
+              <i class="fa fa-bars"></i>
+            </span>
+          </div>
+        </div>
+        
+        <div id="header-bottom" class="clearfix">
+          <div class="container">
+          
+            <nav>
+              <ul>
+                <li class="current-page"><a href="{{ url_for('show_index') }}">Home</a></li>
+                <li><a href="{{ url_for('show_gallery') }}">Gallery</a></li>
+                <li><a href="{{ url_for('show_facilities') }}">Facilities</a></li>
+                <li><a href="{{ url_for('show_reviews') }}">Reviews</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            
+              <a class="toggle-nav " href="#"></a>
+              
+            </nav>
+            
+          </div>        
+        </div>
+       
+       </header>
+     
+     
+      <div id="main" class="container">
+        
+        <div id="content-area">
+          <img id="banner-image" src="{{ url_for('static', filename='images/looe-banner.jpg') }}" alt="">
+          
+          <h1>Welcome to Moby Lodge!</h1>
+          
+          <p>Located in the centre of the small town and fishing port of Looe, 
+          this cosy first floor flat is just a few minutes’ away from the beach and 
+          amenities.</p>
+          
+          <p>Being so close to the railway station offers you a chance to leave the
+            car at home and arrive by train on the scenic Looe Valley line along the 
+            beautiful riverside track which connects from the main line at Liskeard.</p> 
+          
+          <p>When arriving in Looe you will find the flat hidden away behind the 
+            Black Swan pub, one of the most popular in the town.</p> 
+          
+          <p>You enter the apartment after climbing a small flight of steps where a 
+            pretty shared garden takes you in through the door to the open plan living 
+            area with kitchen, dining area and sitting area. </p>
+          
+          <p>Completing the accommodation is a double bedroom opposite the bathroom.</p>
+          
+          <p>A patio is right outside the door and opposite the pretty shared courtyard 
+            offering relaxation at the end of a day after spending time on the beach.</p> 
+          
+          <p>It’s well worth visiting the harbour to watch the fishing boats come in unloading 
+            their catches, indeed local fish can be found on the menus of many local restaurants.</p> 
+          
+          <p>If you want to try your hand yourself there are plenty of boating and 
+            fishing trips available from the harbour during the season.</p>
+          
+          <p>Another boat trip well worth considering is to visit the beautiful Looe 
+            Island, a natural sanctuary for birds, with two beaches, a natural rock swimming 
+            pool, caves and woodland walks to explore. </p>
+          
+          <p>With the stunning coastline waiting to be explored and so much to see and do around 
+            Looe itself makes this an ideal destination whatever the time of year.</p>
+        </div>
+        
+      </div>
+      
+    </div>
+  </body>  
+</html>
