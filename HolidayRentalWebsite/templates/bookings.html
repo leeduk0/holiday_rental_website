@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- 100042945 -->
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Moby Lodge</title>
+    
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    <script src=" http://code.jquery.com/jquery-1.9.1.js "></script>
+    <script src="{{ url_for('static', filename='scripts/navbar.js') }}"></script>
+  </head>
+  
+  <body>
+    <div id="wrapper">
+    
+      <header>
+        
+        <div id="header-top">
+          <div class="container">
+            <h1>Moby Lodge</h1>
+            <span class="menu-trigger">
+              <i class="fa fa-bars"></i>
+            </span>
+          </div>
+        </div>
+        
+        <div id="header-bottom" class="clearfix">
+          <div class="container">
+          
+            <nav>
+              <ul>
+                <li class="current-page"><a href="{{ url_for('show_index') }}">Home</a></li>
+                <li><a href="{{ url_for('show_gallery') }}">Gallery</a></li>
+                <li><a href="{{ url_for('show_facilities') }}">Facilities</a></li>
+                <li><a href="{{ url_for('show_reviews') }}">Reviews</a></li>
+                <li><a href="{{ url_for('show_contact') }}">Contact</a></li>
+              </ul>
+            
+              <a class="toggle-nav " href="#"></a>
+              
+            </nav>
+            
+          </div>        
+        </div>
+       
+       </header>
+     
+     
+      <div id="main" class="container">
+        
+        <div id="content-area">
+            {% from "_formhelpers.html" import render_field %}
+            <form method="POST" action="{{ url_for('add_booking') }}">
+                {{ form.csrf_token }}
+                {{ render_field(form.start_date) }}
+                {{ render_field(form.end_date) }}
+                {{ render_field(form.name) }}
+                {{ render_field(form.email) }}
+                <input type="submit" value="Submit">
+            </form>
+
+
+        <div id="comment-area">
+            {% for line in bookings %}
+                {% for item in line %}
+                    <p>
+                        {{ item }}
+                      </p>
+                      {% endfor %}
+              {% endfor %}
+        </div>
+        </div>
+
+        
+      </div>
+      
+    </div>
+  </body>  
+</html>
