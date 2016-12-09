@@ -39,7 +39,7 @@
                 <li class="current-page"><a href="{{ url_for('show_gallery') }}">Gallery</a></li>
                 <li><a href="{{ url_for('show_facilities') }}">Facilities</a></li>
                 <li><a href="{{ url_for('show_reviews') }}">Reviews</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="{{ url_for('show_contact') }}">Contact</a></li>
               </ul>
             
               <a class="toggle-nav " href="#"></a>
@@ -76,43 +76,43 @@
             
             <div class="image-tile">
               <a class="modal-trigger" href="{{ url_for('static', filename='images/living-room.jpg') }}">
-                <img src="{{ url_for('static', filename='living-room.jpg') }}" alt="">
+                <img src="{{ url_for('static', filename='images/living-room.jpg') }}" alt="">
               </a>
             </div>
             
             <div class="image-tile">
-              <a class="modal-trigger" href="images/kitchen.jpg">
-                <img src="images/kitchen.jpg" alt="">
+              <a class="modal-trigger" href="{{ url_for('static', filename='images/kitchen.jpg') }}">
+                <img src="{{ url_for('static', filename='images/kitchen.jpg') }}" alt="">
               </a>
             </div>
             
             <div class="image-tile">
-              <a class="modal-trigger" href="images/dining-area.jpg">
-                <img src="images/dining-area.jpg" alt="">
+              <a class="modal-trigger" href="{{ url_for('static', filename='images/dining-area.jpg') }}">
+                <img src="{{ url_for('static', filename='images/dining-area.jpg') }}" alt="">
               </a>
             </div>
             
             <div class="image-tile">
-              <a class="modal-trigger" href="images/bedroom.jpg">
-                <img src="images/bedroom.jpg" alt="">
+              <a class="modal-trigger" href="{{ url_for('static', filename='images/bedroom.jpg') }}">
+                <img src="{{ url_for('static', filename='images/bedroom.jpg') }}" alt="">
               </a>
             </div>
             
             <div class="image-tile">
-              <a class="modal-trigger" href="images/bathroom.jpg">
-                <img src="images/bathroom.jpg" alt="">
+              <a class="modal-trigger" href="{{ url_for('static', filename='images/bathroom.jpg') }}">
+                <img src="{{ url_for('static', filename='images/bathroom.jpg') }}" alt="">
               </a>
             </div>
             
             <div class="image-tile">
-              <a class="modal-trigger" href="images/looe-1.jpg">
-                <img src="images/looe-1.jpg" alt="">
+              <a class="modal-trigger" href="{{ url_for('static', filename='images/looe-1.jpg') }}">
+                <img src="{{ url_for('static', filename='images/looe-1.jpg') }}" alt="">
               </a>
             </div>
             
             <div class="image-tile">
-              <a class="modal-trigger" href="images/looe-2.jpg">
-                <img src="images/looe-2.jpg" alt="">
+              <a class="modal-trigger" href="{{ url_for('static', filename='images/looe-2.jpg') }}">
+                <img src="{{ url_for('static', filename='images/looe-2.jpg') }}" alt="">
               </a>
             </div>
 
